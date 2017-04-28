@@ -1,0 +1,8 @@
+avrdude -pm328p -cusbasp -Uflash:w:main.hex:a
+
+#lfuse reads as FF
+#hfuse reads as DA - EESAVE disable
+#hfuse reads as D2 - EESAVE enable
+#efuse reads as 5
+#avrdude -pm328p -cusbasp -v - read info
+#avrdude -pm328p -cusbasp -U hfuse:w:0xD2:m
